@@ -21,7 +21,7 @@ export class EventListPage implements OnInit {
         this.eventList.push({
           id: snap.id,
           name: snap.data().name,
-          price: snap.data().price,
+          description: snap.data().description,
           date: snap.data().date,
         });
         return false;

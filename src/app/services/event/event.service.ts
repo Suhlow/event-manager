@@ -25,7 +25,7 @@ createEvent(
   eventName: string,
   eventDate: string,
   eventDescription: string,
-  eventCost: number): Promise<firebase.firestore.DocumentReference> {
+ ): Promise<firebase.firestore.DocumentReference> {
   return this.eventListRef.add({
     name: eventName,
     date: eventDate,

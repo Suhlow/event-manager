@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-/*import { Plugins, CameraResultType  } from '@capacitor/core';*/
+import { Plugins, CameraResultType  } from '@capacitor/core';
 import { EventService } from '../../services/event/event.service';
 import { ActivatedRoute } from '@angular/router';
 
-/*const { Camera } = Plugins;*/
+const { Camera } = Plugins;
 
 @Component({
   selector: 'app-event-detail',
@@ -15,7 +15,7 @@ export class EventDetailPage implements OnInit {
 
   public currentEvent: any = {};
   public guestName = '';
- /* public picture: string = null;*/
+  public picture: string = null;
 
   constructor(
     private eventService: EventService,
@@ -32,7 +32,7 @@ export class EventDetailPage implements OnInit {
       this.currentEvent.id = eventSnapshot.id;
     });
     }
-/*
+
 async takePicture(): Promise<void> {
   try {
     const profilePicture = await Camera.getPhoto({
@@ -44,6 +44,6 @@ async takePicture(): Promise<void> {
   } catch (error) {
     console.error(error);
   }
-}*/
+}
     
 }
