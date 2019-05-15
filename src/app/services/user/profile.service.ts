@@ -20,6 +20,12 @@ public currentUser: firebase.User;
   });
   }
 
+
+deleteAccount(userProfile): Promise<void> {
+      return this.userProfile.delete();
+  }
+
+
 getUserProfile(): firebase.firestore.DocumentReference {
   return this.userProfile;
 }

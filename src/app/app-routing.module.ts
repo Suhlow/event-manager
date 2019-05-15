@@ -22,6 +22,8 @@ const routes: Routes = [
   { path: 'reset-password', loadChildren: './pages/reset-password/reset-password.module#ResetPasswordPageModule' },
 
   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' },
+  
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
 
 ];
 

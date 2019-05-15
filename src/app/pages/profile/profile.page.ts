@@ -29,6 +29,12 @@ export class ProfilePage implements OnInit {
     });
   }
 
+  deleteAccount(): void {
+  this.profileService.deleteAccount(this.userProfile).then(() => {
+    this.router.navigateByUrl('welcome');
+  });
+}
+
 logOut(): void {
   this.authService.logoutUser().then( () => {
     this.router.navigateByUrl('login');
