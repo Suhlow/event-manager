@@ -8,9 +8,6 @@
         <ion-icon slot="icon-only" name="person"></ion-icon>
       </ion-button>
     </ion-buttons>
-<ion-button (click)="logOut()">
-        <ion-icon slot="icon-only" name="log-out"></ion-icon>
-      </ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -25,5 +22,9 @@
 
 <ion-button expand="block" fill="clear" routerLink="/event-list" routerLinkActive="active">
   I want to see all events
+</ion-button>
+
+<ion-button expand="block" fill="clear" (click)="logOut()" routerLinkActive="active">
+  Log me out please
 </ion-button>
 

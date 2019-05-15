@@ -21,13 +21,11 @@
         <ion-col class="text-left" size="5"> Name </ion-col>
         <ion-col
           class="text-center"
-          size="7"
           *ngIf="userProfile?.firstName || userProfile?.lastName"
         >
           {{userProfile?.firstName}} {{userProfile?.lastName}}
         </ion-col>
         <ion-col
-          size="7"
           class="placeholder-profile text-center"
           *ngIf="!userProfile?.firstName"
         >
@@ -58,11 +56,11 @@
           {{userProfile?.email}}
         </ion-col>
         <ion-col
-          size="7"
           class="placeholder-profile text-center"
           *ngIf="!userProfile?.email"
         >
-                </ion-col>
+        </ion-col>
+      <span> Tap here to update</span>
       </ion-row>
     </ion-grid>
   </ion-label>
@@ -75,6 +73,7 @@
         <ion-col class="text-left" size="5"> Password </ion-col>
         <ion-col class="text-center" size="7" class="placeholder-profile">
         </ion-col>
+        <span> Tap here to update</span>
       </ion-row>
     </ion-grid>
   </ion-label>
@@ -82,16 +81,14 @@
 
 <ion-item (click)="deleteAccount()">
   <ion-label>
-    <ion-grid>
-      <ion-row>
-       <ion-button color="danger" icon-left>
+       <ion-button color="danger" icon-center>
           <ion-icon name="ios-trash"></ion-icon>
           Delete
       </ion-button>
-      </ion-row>
-    </ion-grid>
   </ion-label>
 </ion-item>
-
+<ion-button routerLink="/home">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
   </ion-list>
 </ion-content>

@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 
+import { AuthService } from '../services/user/auth.service';
+import { Routes } from '@angular/router';
+
+
 @NgModule({
   imports: [
     CommonModule,
