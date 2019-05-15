@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-/*import { Plugins, CameraResultType, CameraSource  } from '@capacitor/core';*/
+/*import { Plugins, CameraResultType  } from '@capacitor/core';*/
 import { EventService } from '../../services/event/event.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -15,7 +15,7 @@ export class EventDetailPage implements OnInit {
 
   public currentEvent: any = {};
   public guestName = '';
-  public guestPicture: string = null;
+ /* public picture: string = null;*/
 
   constructor(
     private eventService: EventService,
@@ -32,22 +32,7 @@ export class EventDetailPage implements OnInit {
       this.currentEvent.id = eventSnapshot.id;
     });
     }
-
-addGuest(guestName: string): void {
-  this.eventService
-    .addGuest(
-      guestName,
-      this.currentEvent.id,
-      this.currentEvent.price,
-      this.guestPicture)
-    .then(() => {
-      this.guestName = ' ';
-      this.guestPicture = null;
-    });
-}
-
-/**
-
+/*
 async takePicture(): Promise<void> {
   try {
     const profilePicture = await Camera.getPhoto({
@@ -55,11 +40,10 @@ async takePicture(): Promise<void> {
       allowEditing: false,
       resultType: CameraResultType.Base64
     });
-    this.guestPicture = profilePicture.base64Data.slice(23);
+    this.picture = profilePicture.base64Data.slice(23);
   } catch (error) {
     console.error(error);
   }
-}
-**/
+}*/
     
 }

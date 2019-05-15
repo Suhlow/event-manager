@@ -15,19 +15,17 @@ export class EventCreatePage implements OnInit {
   createEvent(
   eventName: string,
   eventDate: string,
-  eventPrice: number,
-  eventCost: number
+  eventDescription: string
 ): void {
   if (
     eventName === undefined ||
     eventDate === undefined ||
-    eventPrice === undefined ||
-    eventCost === undefined
+    eventDescription === undefined 
   ) {
     return;
   }
   this.eventService
-    .createEvent(eventName, eventDate, eventPrice, eventCost)
+    .createEvent(eventName, eventDate, eventDescription)
     .then(() => {
       this.router.navigateByUrl('/home');
     });
