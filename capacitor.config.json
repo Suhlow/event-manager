@@ -3,5 +3,6 @@
   "appName": "event-manager",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "src"
+  "webDir": "src",
+  "windowsAndroidStudioPath" : "C:\\Users\\utilisateur\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\183.5522156\\bin\\studio64.exe"
 }
